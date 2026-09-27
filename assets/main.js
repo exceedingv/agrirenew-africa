@@ -88,14 +88,30 @@
       /* Add other agriculture institutes here, e.g. { mark: 'IITA', name: '…', what: '…' } */
     ] }
   ];
+  /* Logos: put a file you have permission to use in assets/logos/ named after the mark in lower case,
+     e.g. assets/logos/dbn.png. Until the file exists, a text badge shows instead. */
+  function logoOrBadge(c, cls){
+    return '<img class="cred-logo ' + cls + '-img" src="assets/logos/' + c.mark.toLowerCase() + '.png" alt="' + esc(c.name) + '" data-mark="' + esc(c.mark) + '" data-fallback="' + cls + '">';
+  }
   $('#credGroups').innerHTML = CREDS.map(function(g){
     return '<div class="cred-group"><h3>' + esc(g.group) + '</h3><p>' + esc(g.note) + '</p>' + g.items.map(function(c){
-      return '<div class="cred"><span class="mono-badge" aria-hidden="true">' + esc(c.mark) + '</span><div><b>' + esc(c.name) + '</b><span>' + esc(c.what) + '</span></div></div>';
+      return '<div class="cred">' + logoOrBadge(c, 'mono-badge') + '<div><b>' + esc(c.name) + '</b><span>' + esc(c.what) + '</span></div></div>';
     }).join('') + '</div>';
   }).join('');
   $('#trustList').innerHTML = CREDS.reduce(function(a, g){ return a.concat(g.items.filter(function(c){ return c.strip; })); }, []).map(function(c){
-    return '<li><abbr title="' + esc(c.name) + '">' + esc(c.mark) + '</abbr></li>';
+    return '<li>' + logoOrBadge(c, 'strip-mark') + '</li>';
   }).join('');
+  /* A logo file that is missing falls back to the text badge. */
+  $$('img.cred-logo').forEach(function(img){
+    function fallback(){
+      var span = document.createElement('span');
+      span.className = img.getAttribute('data-fallback');
+      span.setAttribute('title', img.alt);
+      span.textContent = img.getAttribute('data-mark');
+      img.replaceWith(span);
+    }
+    if (img.complete && !img.naturalWidth) fallback(); else img.addEventListener('error', fallback);
+  });
 
   /* ---------- tab helper (who we serve, ecosystem) ---------- */
   function tabs(list, render){

@@ -33,7 +33,7 @@ To add or edit an Insights guide, edit the `POSTS` list in `assets/main.js`. The
 
 ## Credentials
 
-The trust strip under the hero and the Credentials section both come from the `CREDS` list in `assets/main.js`. Only list relationships you can document. Names are shown as text badges; add an organisation's logo only with its written permission.
+The trust strip under the hero and the Credentials section both come from the `CREDS` list in `assets/main.js`. Only list relationships you can document. Names show as text badges. To show a logo, put a PNG you have permission to use in `assets/logos/` named after the badge (e.g. `dbn.png`); see `assets/logos/README.md`.
 
 ## Careers page
 
