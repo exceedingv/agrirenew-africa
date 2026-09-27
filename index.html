@@ -2,227 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://i.ytimg.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>AgriRenew Africa Ltd — Agriculture, Renewed for Everyone</title>
-<meta name="description" content="AgriRenew Africa Ltd is a full agricultural technology ecosystem: waste-to-energy bio-briquettes, climate solutions, an agri academy, farmer credit, and a verified marketplace across Africa.">
+<title>AgriRenew Africa</title>
+<meta name="description" content="AgriRenew Africa Ltd is an integrated agriculture company and consultancy: waste-to-energy bio-briquettes, climate-smart advisory, farmer credit, a verified produce marketplace and the AgriRenew Academy. Partner with us on programmes, grants and contracts across Africa.">
+<meta name="theme-color" content="#07231B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AgriRenew Africa: agriculture, renewed for everyone">
+<meta property="og:description" content="An integrated agriculture company and consultancy for farmers, governments, development partners and investors across Africa.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?q=70&w=1200&auto=format&fit=crop">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#07231B;
-  --forest:#0C3527;
-  --leaf:#3E9B6E;
-  --gold:#D4A73C;
-  --gold-soft:#E8C878;
-  --cream:#F4EFE2;
-  --cream-dim:#C9C2AE;
-  --paper:#FBF8F0;
-  --paper-ink:#14261F;
-  --line:rgba(212,167,60,.28);
-  --radius:14px;
-  --max:1180px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--cream);font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-h1,h2,h3,.serif{font-family:'Fraunces',serif}
-.mono{font-family:'Space Grotesk',monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
-section{padding:92px 0}
-.eyebrow{color:var(--gold);font-family:'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:.74rem;font-weight:600;display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
-h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:600;line-height:1.15;margin-bottom:16px}
-.lede{color:var(--cream-dim);max-width:660px;font-size:1.06rem}
-.btn{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#231a05;font-weight:700;padding:13px 26px;border-radius:999px;border:none;font-size:.95rem;cursor:pointer;transition:transform .18s,box-shadow .18s;font-family:'Archivo',sans-serif}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(212,167,60,.32)}
-.btn.ghost{background:transparent;color:var(--gold-soft);border:1.5px solid var(--line)}
-.btn.ghost:hover{border-color:var(--gold);box-shadow:none}
- 
-/* ---------- Nav ---------- */
-header{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(7,35,27,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,167,60,.14)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:700;font-size:1.16rem}
-.logo svg{width:38px;height:38px;flex:none}
-.logo em{font-style:normal;color:var(--gold)}
-.navlinks{display:flex;gap:22px;align-items:center}
-.navlinks a{font-size:.9rem;color:var(--cream-dim);font-weight:500;transition:color .2s}
-.navlinks a:hover,.navlinks a:focus-visible{color:var(--gold-soft)}
-.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.burger span{display:block;width:24px;height:2px;background:var(--gold);margin:5px 0;transition:.25s}
- 
-/* ---------- Hero with rolling photos ---------- */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:150px 0 80px;overflow:hidden;isolation:isolate}
-.hero-slides{position:absolute;inset:0;z-index:-2}
-.hero-slides .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);transition:opacity 1.6s ease,transform 7s linear}
-.hero-slides .slide.on{opacity:1;transform:scale(1)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(7,35,27,.94) 20%,rgba(7,35,27,.72) 55%,rgba(7,35,27,.42));}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:700;line-height:1.07;letter-spacing:-.01em}
-.hero h1 .gold{color:var(--gold);font-style:italic;font-weight:600}
-.hero p.sub{margin:22px 0 30px;color:var(--cream-dim);font-size:1.12rem;max-width:540px}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.hero-badges{display:flex;gap:22px;margin-top:38px;flex-wrap:wrap}
-.hero-badges div{border-left:2px solid var(--line);padding-left:14px}
-.hero-badges b{display:block;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--gold-soft)}
-.hero-badges span{font-size:.82rem;color:var(--cream-dim)}
-.hero-dots{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:9px}
-.hero-dots button{width:10px;height:10px;border-radius:50%;border:1px solid var(--gold);background:transparent;cursor:pointer;padding:0}
-.hero-dots button.on{background:var(--gold)}
- 
-/* the signature loop */
-.loop-card{background:rgba(8,42,31,.82);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
-.loop-title{text-align:center;color:var(--gold);font-family:'Space Grotesk',sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px}
-.loop-sub{text-align:center;font-family:'Fraunces',serif;font-size:1.22rem;margin-bottom:12px}
-#loopSvg{width:100%;height:auto}
-.loop-node{cursor:pointer}
-.loop-node circle{transition:fill .25s}
-.loop-node text{fill:var(--cream);font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600}
-.loop-node.active circle.dot{fill:var(--gold)}
-.loop-readout{margin-top:8px;background:rgba(212,167,60,.09);border:1px solid var(--line);border-radius:12px;padding:13px 15px;min-height:88px}
-.loop-readout b{color:var(--gold-soft);font-family:'Fraunces',serif;font-size:1rem;display:block;margin-bottom:4px}
-.loop-readout p{font-size:.88rem;color:var(--cream-dim)}
- 
-/* ---------- Story / About ---------- */
-.story{background:var(--forest)}
-.story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
-.story-img{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.35);position:relative}
-.story-img img{aspect-ratio:4/5;object-fit:cover;width:100%}
-.story-img figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;font-size:.8rem;background:linear-gradient(transparent,rgba(7,35,27,.94));color:var(--cream-dim)}
-.story p{color:var(--cream-dim);margin-bottom:14px}
-.story blockquote{border-left:3px solid var(--gold);padding:6px 0 6px 18px;margin:22px 0;font-family:'Fraunces',serif;font-size:1.2rem;font-style:italic;color:var(--gold-soft);line-height:1.5}
- 
-/* ---------- Ecosystem tabs ---------- */
-.eco{background:var(--paper);color:var(--paper-ink)}
-.eco .lede{color:#5A6B60}
-.eco-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 26px}
-.eco-tab{border:1.5px solid #D8CFB4;background:#fff;color:#4A5A50;padding:11px 20px;border-radius:999px;font-weight:600;font-size:.92rem;cursor:pointer;font-family:'Archivo',sans-serif;transition:.2s}
-.eco-tab:hover{border-color:var(--gold)}
-.eco-tab.active{background:var(--ink);color:var(--gold-soft);border-color:var(--ink)}
-.eco-panel{display:none;background:#fff;border:1px solid #E7DFC8;border-radius:var(--radius);padding:36px;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center;box-shadow:0 18px 40px rgba(20,38,31,.08)}
-.eco-panel.active{display:grid;animation:fadeUp .45s ease}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.eco-panel h3{font-size:1.7rem;margin-bottom:12px}
-.eco-panel p{color:#4A5A50;margin-bottom:14px}
-.eco-panel ul{list-style:none}
-.eco-panel li{padding:9px 0 9px 30px;position:relative;color:#3B4A41;font-size:.96rem;border-bottom:1px dashed #E7DFC8}
-.eco-panel li:last-child{border-bottom:none}
-.eco-panel li::before{content:"";position:absolute;left:2px;top:15px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--gold-soft),var(--gold))}
-.eco-photo{border-radius:12px;overflow:hidden;border:1px solid #E7DFC8;box-shadow:0 14px 32px rgba(20,38,31,.14)}
-.eco-photo img{aspect-ratio:4/3;object-fit:cover;width:100%}
-.eco-cta{margin-top:18px}
- 
-/* ---------- Climate ---------- */
-.climate{position:relative;overflow:hidden;isolation:isolate}
-.climate-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
-.climate::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(7,35,27,.9),rgba(7,35,27,.86))}
-.climate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
-.cl-card{background:rgba(12,53,39,.75);backdrop-filter:blur(4px);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px}
-.cl-card h3{color:var(--gold-soft);font-size:1.18rem;margin:12px 0 8px}
-.cl-card p{font-size:.92rem;color:var(--cream-dim)}
-.cl-card .ic{width:44px;height:44px}
- 
-/* ---------- Steps ---------- */
-.steps{counter-reset:step;background:var(--forest)}
-.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
-.step{background:linear-gradient(170deg,#0C3527,#092C21);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;position:relative;counter-increment:step}
-.step::before{content:counter(step,decimal-leading-zero);position:absolute;top:18px;right:20px;font-family:'Fraunces',serif;font-size:1.6rem;color:rgba(212,167,60,.4);font-weight:600}
-.step h3{font-size:1.12rem;margin:14px 0 8px;color:var(--gold-soft)}
-.step p{font-size:.9rem;color:var(--cream-dim)}
-.step .ic{width:42px;height:42px}
- 
-/* ---------- Track record ---------- */
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:40px 0}
-.stat{border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;background:rgba(12,53,39,.5)}
-.stat b{font-family:'Fraunces',serif;font-size:2.3rem;color:var(--gold);display:block;line-height:1}
-.stat span{font-size:.88rem;color:var(--cream-dim);display:block;margin-top:8px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-.shot{aspect-ratio:4/3;border-radius:12px;border:1px solid var(--line);overflow:hidden;position:relative}
-.shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.shot:hover img{transform:scale(1.05)}
-.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;font-size:.8rem;background:linear-gradient(transparent,rgba(7,35,27,.94));color:var(--cream)}
-.gallery-note{margin-top:14px;font-size:.85rem;color:var(--cream-dim);font-style:italic}
- 
-/* ---------- Video ---------- */
-.video{background:var(--paper);color:var(--paper-ink)}
-.video .lede{color:#5A6B60}
-.video-frame{margin-top:36px;border-radius:16px;overflow:hidden;border:1px solid #E7DFC8;box-shadow:0 22px 46px rgba(20,38,31,.14);position:relative;aspect-ratio:16/9;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
-.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.play-badge{width:78px;height:78px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(212,167,60,.4)}
-.play-badge svg{width:28px;height:28px;margin-left:4px}
-.video-frame p{color:var(--cream-dim);font-size:.92rem;max-width:420px;text-align:center;padding:0 20px}
- 
-/* ---------- Testimonials ---------- */
-.testis{position:relative}
-.testi-track{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-.testi{background:linear-gradient(165deg,#0C3527,#08281D);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:16px}
-.testi .quote-mark{font-family:'Fraunces',serif;font-size:3rem;color:var(--gold);line-height:.5;height:20px}
-.testi p{font-size:.95rem;color:var(--cream-dim);flex:1;font-style:italic}
-.testi .who{display:flex;align-items:center;gap:12px}
-.testi .who .init{width:44px;height:44px;border-radius:50%;background:rgba(212,167,60,.14);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;color:var(--gold-soft);font-weight:600}
-.testi .who b{display:block;font-size:.92rem;color:var(--cream)}
-.testi .who span{font-size:.78rem;color:var(--leaf);font-weight:600}
- 
-/* ---------- Team ---------- */
-.team{background:var(--forest)}
-.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
-.person{background:linear-gradient(165deg,#0C3527,#08281D);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:grid;grid-template-columns:96px 1fr;gap:22px;align-items:start}
-.avatar{width:96px;height:96px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:2rem;color:var(--gold);background:rgba(212,167,60,.08)}
-.person h3{font-size:1.3rem;color:var(--gold-soft)}
-.person .role{color:var(--leaf);font-weight:600;font-size:.88rem;margin:4px 0 10px}
-.person p{font-size:.92rem;color:var(--cream-dim)}
- 
-/* ---------- FAQ ---------- */
-.faq{background:var(--paper);color:var(--paper-ink)}
-.faq-item{border-bottom:1px solid #E0D7BE}
-.faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 44px 22px 4px;font-family:'Fraunces',serif;font-size:1.13rem;font-weight:600;color:var(--paper-ink);cursor:pointer;position:relative}
-.faq-q::after{content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--gold);transition:transform .25s;font-family:'Archivo',sans-serif}
-.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.faq-a p{padding:0 4px 22px;color:#4A5A50;max-width:780px}
- 
-/* ---------- Contact / footer ---------- */
-.contact{position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 90% 20%,rgba(212,167,60,.12),transparent 60%)}
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;position:relative}
-.contact-card{background:linear-gradient(160deg,#0C3527,#082A1F);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
-.contact-card h3{color:var(--gold-soft);margin-bottom:14px;font-size:1.2rem}
-.contact-line{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed rgba(212,167,60,.2);font-size:.94rem;color:var(--cream-dim)}
-.contact-line:last-child{border:none}
-.contact-line b{color:var(--cream);min-width:96px;font-weight:600}
-footer{border-top:1px solid rgba(212,167,60,.16);padding:36px 0;font-size:.85rem;color:var(--cream-dim)}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
- 
-/* reveal on scroll */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.hero-slides .slide{transition:opacity .3s}}
- 
-/* ---------- Responsive ---------- */
-@media (max-width:960px){
-  .hero .wrap,.eco-panel,.contact-grid,.team-grid,.story .wrap{grid-template-columns:1fr}
-  .steps-grid,.proof-grid,.climate-grid,.testi-track{grid-template-columns:1fr 1fr}
-  .gallery{grid-template-columns:1fr 1fr}
-  .navlinks{position:fixed;top:70px;right:0;background:#07231B;flex-direction:column;padding:26px;width:min(78vw,320px);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .3s;height:calc(100vh - 70px);align-items:flex-start;overflow-y:auto}
-  .navlinks.open{transform:none}
-  .burger{display:block}
-  .story-img{max-width:440px;margin:0 auto}
-}
-@media (max-width:560px){
-  .steps-grid,.proof-grid,.gallery,.climate-grid,.testi-track{grid-template-columns:1fr}
-  section{padding:64px 0}
-  .person{grid-template-columns:1fr}
-  .hero{padding-top:120px}
-}
-</style>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
- 
-<header>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="announce">
+  <span>Governments, development partners and institutions: <b>we deliver agriculture programmes end to end.</b></span>
+  <a href="#partners">Partner with us →</a>
+</div>
+
+<header class="top">
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="AgriRenew Africa home">
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
@@ -230,501 +35,527 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <path d="M24 36c0-9 3-15 11-19-1 9-4 15-11 19Z" fill="#3E9B6E"/>
         <path d="M24 36c0-9-3-15-11-19 1 9 4 15 11 19Z" fill="#D4A73C"/>
       </svg>
-      Agri<em>Renew</em>&nbsp;Africa
+      <span>Agri<em>Renew</em> Africa</span>
     </a>
-    <nav class="navlinks" id="navlinks">
-      <a href="#story">Our Story</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <nav class="navlinks" id="navlinks" aria-label="Main">
+      <a href="#story">About</a>
+      <a href="#services">Services</a>
       <a href="#ecosystem">Ecosystem</a>
-      <a href="#climate">Climate</a>
-      <a href="#credit">Farmer Credit</a>
-      <a href="#impact">Track Record</a>
-      <a href="#voices">Testimonies</a>
-      <a href="#team">Team</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn" href="#contact" style="padding:10px 20px">Talk to us</a>
+      <a href="#partners">Partners &amp; Grants</a>
+      <a href="#insights">Insights</a>
+      <a href="#academy">Academy</a>
+      <a class="btn sm" href="#contact">Talk to us</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
- 
-<!-- ================= HERO with rolling photos ================= -->
-<section class="hero" id="top">
-  <div class="hero-slides" aria-hidden="true">
-    <div class="slide on" style="background-image:url('https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?q=70&w=1800&auto=format&fit=crop')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1530464684439-723262c0d16e?q=70&w=1800&auto=format&fit=crop')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1618265317491-8b7b2324320e?q=70&w=1800&auto=format&fit=crop')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1627989147125-a004d05946d3?q=70&w=1800&auto=format&fit=crop')"></div>
+
+<main id="main">
+
+<!-- ================= HERO CAROUSEL ================= -->
+<section class="hero" id="top" aria-roledescription="carousel" aria-label="AgriRenew highlights">
+  <div class="hero-slides">
+    <div class="slide on" style="background-image:url('https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?q=70&w=1800&auto=format&fit=crop')" role="img" aria-label="A farmer tending healthy green crops"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1530464684439-723262c0d16e?q=70&w=1800&auto=format&fit=crop')" role="img" aria-label="Farmland at harvest time"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1618265317491-8b7b2324320e?q=70&w=1800&auto=format&fit=crop')" role="img" aria-label="Open fields under a wide sky"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1627989147125-a004d05946d3?q=70&w=1800&auto=format&fit=crop')" role="img" aria-label="Fresh vegetables harvested in a basket"></div>
   </div>
-  <div class="wrap">
-    <div>
-      <p class="eyebrow">Agri-tech · Clean energy · Climate solutions</p>
-      <h1>Agriculture made <span class="gold">scalable</span>, affordable, and possible — for everyone.</h1>
-      <p class="sub">AgriRenew Africa Ltd is a full agricultural ecosystem. We turn farm waste into clean energy, train the next generation of agripreneurs, finance and equip smallholder farmers, connect verified produce to real buyers — and design climate solutions for governments and businesses across Africa.</p>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Agribusiness · Consultancy · Clean energy · Climate</p>
+      <h1>Agriculture made <span class="gold">scalable</span>, affordable and possible for everyone.</h1>
+      <p class="sub" id="heroLine">We turn farm waste into clean energy, finance and train farmers, connect verified produce to buyers, and deliver climate-smart agriculture programmes for governments and partners across Africa.</p>
       <div class="hero-ctas">
-        <a class="btn" href="#ecosystem">Explore the ecosystem</a>
+        <a class="btn" href="#partners">Partner or fund a programme</a>
         <a class="btn ghost" href="#credit">Join as a farmer</a>
       </div>
-      <div class="hero-badges">
-        <div><b>12+ yrs</b><span>Agribusiness experience</span></div>
-        <div><b>200+</b><span>Professionals trained</span></div>
-        <div><b>DBN</b><span>Equipment grant–backed</span></div>
-        <div><b>6</b><span>Integrated divisions</span></div>
-      </div>
+      <ul class="hero-badges" aria-label="Key facts">
+        <li><b>12+ yrs</b><span>Hands-on agribusiness</span></li>
+        <li><b>200+</b><span>Professionals trained</span></li>
+        <li><b>DBN</b><span>Equipment grant–backed</span></li>
+        <li><b>6</b><span>Integrated divisions</span></li>
+      </ul>
     </div>
-    <div class="loop-card rv">
+
+    <div class="loop-card">
       <p class="loop-title">Our signature model</p>
       <p class="loop-sub serif">The Waste-to-Wealth Loop</p>
-      <svg id="loopSvg" viewBox="0 0 420 340" role="img" aria-label="Circular diagram of the AgriRenew waste-to-wealth loop">
-        <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0 0L10 5L0 10z" fill="#D4A73C"/>
-          </marker>
-        </defs>
+      <svg viewBox="0 0 420 340" role="img" aria-label="Circular diagram: farm waste in, clean energy out, credit earned, farms grow">
+        <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#D4A73C"/></marker></defs>
         <circle cx="210" cy="170" r="118" fill="none" stroke="rgba(212,167,60,.35)" stroke-width="1.6" stroke-dasharray="5 7"/>
         <path d="M 210 52 A 118 118 0 0 1 328 170" fill="none" stroke="#D4A73C" stroke-width="2" marker-end="url(#arrow)" opacity=".8"/>
         <path d="M 328 170 A 118 118 0 0 1 210 288" fill="none" stroke="#D4A73C" stroke-width="2" marker-end="url(#arrow)" opacity=".8"/>
         <path d="M 210 288 A 118 118 0 0 1 92 170" fill="none" stroke="#D4A73C" stroke-width="2" marker-end="url(#arrow)" opacity=".8"/>
         <path d="M 92 170 A 118 118 0 0 1 210 52" fill="none" stroke="#D4A73C" stroke-width="2" marker-end="url(#arrow)" opacity=".8"/>
-        <text x="210" y="176" text-anchor="middle" fill="#E8C878" font-family="Fraunces,serif" font-size="15" font-style="italic">Nothing wasted.</text>
-        <text x="210" y="196" text-anchor="middle" fill="#C9C2AE" font-family="Archivo,sans-serif" font-size="11">Everything renewed.</text>
-        <g class="loop-node active" data-loop="0" tabindex="0" role="button" aria-label="Farm waste collected">
-          <circle class="dot" cx="210" cy="52" r="13" fill="#3E9B6E"/>
-          <text x="210" y="26" text-anchor="middle">Farm waste in</text>
-        </g>
-        <g class="loop-node" data-loop="1" tabindex="0" role="button" aria-label="Briquettes and clean energy">
-          <circle class="dot" cx="328" cy="170" r="13" fill="#3E9B6E"/>
-          <text x="330" y="150" text-anchor="middle">Clean energy out</text>
-        </g>
-        <g class="loop-node" data-loop="2" tabindex="0" role="button" aria-label="Farmer credit earned">
-          <circle class="dot" cx="210" cy="288" r="13" fill="#3E9B6E"/>
-          <text x="210" y="322" text-anchor="middle">Credit earned</text>
-        </g>
-        <g class="loop-node" data-loop="3" tabindex="0" role="button" aria-label="Inputs, loans and market access">
-          <circle class="dot" cx="92" cy="170" r="13" fill="#3E9B6E"/>
-          <text x="88" y="150" text-anchor="middle">Farms grow</text>
-        </g>
+        <text x="210" y="176" text-anchor="middle" fill="#E8C878" font-family="Fraunces,Georgia,serif" font-size="15" font-style="italic">Nothing wasted.</text>
+        <text x="210" y="196" text-anchor="middle" fill="#C9C2AE" font-family="Archivo,Arial,sans-serif" font-size="11">Everything renewed.</text>
+        <g class="loop-node active" data-loop="0" tabindex="0" role="button" aria-label="Farm waste in"><circle cx="210" cy="52" r="13" fill="#3E9B6E"/><text x="210" y="26" text-anchor="middle">Farm waste in</text></g>
+        <g class="loop-node" data-loop="1" tabindex="0" role="button" aria-label="Clean energy out"><circle cx="328" cy="170" r="13" fill="#3E9B6E"/><text x="330" y="150" text-anchor="middle">Clean energy out</text></g>
+        <g class="loop-node" data-loop="2" tabindex="0" role="button" aria-label="Credit earned"><circle cx="210" cy="288" r="13" fill="#3E9B6E"/><text x="210" y="322" text-anchor="middle">Credit earned</text></g>
+        <g class="loop-node" data-loop="3" tabindex="0" role="button" aria-label="Farms grow"><circle cx="92" cy="170" r="13" fill="#3E9B6E"/><text x="88" y="150" text-anchor="middle">Farms grow</text></g>
       </svg>
       <div class="loop-readout" id="loopReadout" aria-live="polite">
         <b>Farm waste in</b>
-        <p>Registered farmers supply crop residues and farm waste from their fields — waste that would otherwise be burned or dumped.</p>
+        <p>Registered farmers supply crop residues and farm waste that would otherwise be burned or dumped.</p>
       </div>
     </div>
   </div>
-  <div class="hero-dots" id="heroDots" aria-label="Hero image selector"></div>
+  <div class="hero-controls">
+    <button type="button" class="hc-btn" id="heroPrev" aria-label="Previous photo">‹</button>
+    <div class="hero-dots" id="heroDots"></div>
+    <button type="button" class="hc-btn" id="heroNext" aria-label="Next photo">›</button>
+    <button type="button" class="hc-btn" id="heroPause" aria-label="Pause slideshow">❚❚</button>
+  </div>
 </section>
- 
+
+<!-- ================= WHO WE SERVE ================= -->
+<section class="serve" id="serve">
+  <div class="wrap">
+    <p class="eyebrow">Who we work with</p>
+    <h2>Choose your path into AgriRenew</h2>
+    <div class="serve-tabs" role="tablist" aria-label="Audiences">
+      <button role="tab" aria-selected="true" data-serve="0">Governments &amp; agencies</button>
+      <button role="tab" aria-selected="false" data-serve="1" tabindex="-1">Development partners &amp; donors</button>
+      <button role="tab" aria-selected="false" data-serve="2" tabindex="-1">Agribusinesses &amp; investors</button>
+      <button role="tab" aria-selected="false" data-serve="3" tabindex="-1">Farmers &amp; cooperatives</button>
+    </div>
+    <div class="serve-panel" id="servePanel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
 <!-- ================= STORY ================= -->
 <section class="story" id="story">
-  <div class="wrap">
-    <figure class="story-img rv">
-      <img src="https://images.unsplash.com/photo-1741940365425-1b9a575d373e?q=70&w=1000&auto=format&fit=crop" alt="A farmer carrying a large bundle of harvested biomass — the raw material of the waste-to-energy loop" loading="lazy">
-      <figcaption>Farm biomass on the move — the raw material of our energy loop</figcaption>
+  <div class="wrap story-grid">
+    <figure class="story-img">
+      <img src="https://images.unsplash.com/photo-1741940365425-1b9a575d373e?q=70&w=1000&auto=format&fit=crop" alt="A farmer carrying a large bundle of harvested biomass" loading="lazy" width="1000" height="1250">
+      <figcaption>Farm biomass on the move: the raw material of our energy loop</figcaption>
     </figure>
     <div>
       <p class="eyebrow">Our story</p>
       <h2>We didn't start on a whiteboard. We started on the farm.</h2>
-      <p>For over twelve years, before AgriRenew had a name, our team was in the field — planting cereals and crops, raising livestock and fish, cultivating vegetables across hectares in different parts of Nigeria. We learned what breaks smallholder farming from the inside: energy is expensive, credit is out of reach, good training is rare, and markets don't reward the people who grow the food.</p>
-      <p>So we built a company that fixes all four at once. Waste-to-energy was our first engine — backed by a Development Bank of Nigeria equipment grant — and around it we grew an academy, a farmer credit system, a verified marketplace, and a climate advisory practice. Each part feeds the others.</p>
+      <p>For over twelve years, before AgriRenew had a name, our team was in the field: planting cereals and crops, raising livestock and fish, and growing vegetables across hectares in different parts of Nigeria. We saw the same four problems everywhere.</p>
+      <ol class="problems">
+        <li><b>Waste</b> burned in the open while households paid more every month for charcoal.</li>
+        <li><b>Farmers</b> locked out of credit because they had no records a lender would accept.</li>
+        <li><b>Buyers</b> unable to trust where produce came from or how it was grown.</li>
+        <li><b>Young people</b> who wanted to farm but had no practical, business-first training.</li>
+      </ol>
+      <p>So we built one company that fixes all four at once. Waste-to-energy was our first engine, backed by a Development Bank of Nigeria equipment grant. Around it we grew an academy, a farmer credit system, a verified marketplace, climate advisory and community programmes.</p>
       <blockquote>"We don't just talk about renewing African agriculture. We've done it, we're doing it, and we can prove it."</blockquote>
-      <a class="btn ghost" href="#impact">See the proof</a>
     </div>
   </div>
 </section>
- 
+
+<!-- ================= CONSULTANCY SERVICES ================= -->
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="eyebrow">Consultancy &amp; delivery</p>
+    <h2>Agricultural consultancy, from feasibility to harvest</h2>
+    <p class="lede">We advise, design and deliver. Every engagement ends with something you can use: a plan, a working farm, trained people or a report a funder will accept.</p>
+    <div class="svc-grid">
+      <article class="svc">
+        <span class="svc-no">01</span>
+        <h3>Feasibility &amp; business plans</h3>
+        <p>Bankable plans for farms, processing plants and value-chain projects, with market, cost and risk analysis.</p>
+        <p class="deliv">You get: feasibility study, financial model, investor-ready business plan</p>
+      </article>
+      <article class="svc">
+        <span class="svc-no">02</span>
+        <h3>Farm design &amp; establishment</h3>
+        <p>Site selection, soil testing, land preparation, irrigation and crop or livestock system design, then hands-on setup.</p>
+        <p class="deliv">You get: farm layout, input schedule, setup and first-season support</p>
+      </article>
+      <article class="svc">
+        <span class="svc-no">03</span>
+        <h3>Climate-smart agriculture</h3>
+        <p>Practices that raise yields while cutting emissions and water use: residue management, agroforestry, soil health and clean energy.</p>
+        <p class="deliv">You get: climate risk assessment, adaptation plan, implementation support</p>
+      </article>
+      <article class="svc">
+        <span class="svc-no">04</span>
+        <h3>Value-chain &amp; market linkage</h3>
+        <p>Connecting producers to processors, offtakers and export buyers, with aggregation, grading and traceability.</p>
+        <p class="deliv">You get: value-chain map, offtake arrangements, verified supplier lists</p>
+      </article>
+      <article class="svc">
+        <span class="svc-no">05</span>
+        <h3>Training &amp; capacity building</h3>
+        <p>Field-based training for farmers, extension officers, youth and staff, delivered through the AgriRenew Academy.</p>
+        <p class="deliv">You get: training programme, materials, trainee assessments and certificates</p>
+      </article>
+      <article class="svc">
+        <span class="svc-no">06</span>
+        <h3>Monitoring, evaluation &amp; drones</h3>
+        <p>Baseline surveys, drone and AI-assisted field monitoring, and impact reporting against your programme indicators.</p>
+        <p class="deliv">You get: baseline data, monitoring dashboard, donor-ready impact reports</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ================= ECOSYSTEM ================= -->
 <section class="eco" id="ecosystem">
   <div class="wrap">
     <p class="eyebrow">One company, six engines</p>
     <h2>The AgriRenew ecosystem</h2>
-    <p class="lede">Waste-to-energy is where we started — but it is one department inside a much larger machine. Every division feeds the others, so value never leaves the loop. Tap each engine to explore it.</p>
- 
-    <div class="eco-tabs" role="tablist" aria-label="Ecosystem divisions">
-      <button class="eco-tab active" data-tab="0" role="tab" aria-selected="true">⚡ Waste-to-Energy</button>
-      <button class="eco-tab" data-tab="1" role="tab" aria-selected="false">🎓 Academy</button>
-      <button class="eco-tab" data-tab="2" role="tab" aria-selected="false">🤝 Farmer Credit &amp; Inputs</button>
-      <button class="eco-tab" data-tab="3" role="tab" aria-selected="false">🛒 Marketplace</button>
-      <button class="eco-tab" data-tab="4" role="tab" aria-selected="false">🌍 Climate &amp; Advisory</button>
-      <button class="eco-tab" data-tab="5" role="tab" aria-selected="false">📣 Events &amp; Community</button>
-    </div>
- 
-    <div class="eco-panel active" role="tabpanel">
+    <p class="lede">Every division feeds the others, so value never leaves the loop. Select a division to explore it.</p>
+    <div class="eco-tabs" role="tablist" aria-label="Ecosystem divisions" id="ecoTabs"></div>
+    <div class="eco-panel" id="ecoPanel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= CROPS CAROUSEL ================= -->
+<section class="crops" id="crops">
+  <div class="wrap">
+    <div class="row-head">
       <div>
-        <h3>Waste-to-Energy Division</h3>
-        <p>We convert agricultural waste into clean, affordable bio-briquettes for cooking — and we're building toward waste-to-electricity conversion. Backed by a Development Bank of Nigeria equipment grant for our briquette production machinery.</p>
-        <ul>
-          <li>Bio-briquettes: a cleaner, cheaper alternative to charcoal and firewood</li>
-          <li>Waste-to-electricity conversion programs in development</li>
-          <li>Partner farmers supply waste and buy briquettes below market price</li>
-          <li>DBN-backed production capacity with room to scale</li>
-        </ul>
-        <div class="eco-cta"><a class="btn" href="#contact">Order briquettes</a></div>
+        <p class="eyebrow">What we grow and support</p>
+        <h2>Real crops, grown clean</h2>
+        <p class="lede">We work with food crops, vegetables, livestock and fish, using certified non-GMO seed, healthy soil and as few chemicals as the crop needs.</p>
       </div>
-      <figure class="eco-photo"><img src="https://images.unsplash.com/flagged/photo-1605816140734-df2c839f0b75?q=70&w=1000&auto=format&fit=crop" alt="Baled agricultural residue ready for conversion into bio-briquettes" loading="lazy"></figure>
+      <div class="car-arrows">
+        <button type="button" class="car-btn" data-car="crops" data-dir="-1" aria-label="Scroll crops left">←</button>
+        <button type="button" class="car-btn" data-car="crops" data-dir="1" aria-label="Scroll crops right">→</button>
+      </div>
     </div>
- 
-    <div class="eco-panel" role="tabpanel">
-      <div>
-        <h3>AgriRenew Academy</h3>
-        <p>Practical, business-first agricultural training that takes people from curiosity to their own running agribusiness — soil science to sales.</p>
-        <ul>
-          <li>Crop production: soil texture, nature, and land preparation fundamentals</li>
-          <li>Livestock, poultry, and fish farming from starter scale to commercial</li>
-          <li>AI, drones, and precision technology in modern agriculture</li>
-          <li>Agri-business startup mentoring — graduates launch their own ventures</li>
-          <li>Export readiness: we help producers get licensed to export their goods</li>
-        </ul>
-        <div class="eco-cta"><a class="btn" href="#contact">Enrol in the Academy</a></div>
-      </div>
-      <figure class="eco-photo"><img src="https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?q=70&w=1000&auto=format&fit=crop" alt="A farmer tending crops in a green field — hands-on training is the heart of the Academy" loading="lazy"></figure>
-    </div>
- 
-    <div class="eco-panel" role="tabpanel">
-      <div>
-        <h3>Farmer Credit &amp; Inputs Program</h3>
-        <p>Every registered farmer gets an AgriRenew account. Supplying farm waste builds credit — and credit unlocks real support, priced by the volume each farmer contributes.</p>
-        <ul>
-          <li>Briquettes at below-market prices for participating farmers</li>
-          <li>Input loans: fertilizers, seeds, and farm equipment at affordable rates</li>
-          <li>Support with land acquisition for expanding farmers</li>
-          <li>Forward purchase: we buy produce early at agreed prices, protecting farmers from market swings</li>
-          <li>Free registration, ongoing training, and waste-handling support</li>
-        </ul>
-        <div class="eco-cta"><a class="btn" href="#credit">See how it works</a></div>
-      </div>
-      <figure class="eco-photo"><img src="https://images.unsplash.com/photo-1740741706386-0a211c4a87df?q=70&w=1000&auto=format&fit=crop" alt="A woman farmer in the field — every registered farmer holds an AgriRenew credit account" loading="lazy"></figure>
-    </div>
- 
-    <div class="eco-panel" role="tabpanel">
-      <div>
-        <h3>AgriRenew Marketplace</h3>
-        <p>A direct bridge between verified farmers and real buyers. Farmers register, get verified, and receive a licence to list — buyers get traceable, fairly priced produce.</p>
-        <ul>
-          <li>Verified farmer profiles with captured production parameters</li>
-          <li>Fresh, perishable, and processed goods listed directly by producers</li>
-          <li>Buyers purchase with confidence — every seller is vetted and licensed</li>
-          <li>Export pathway: licensed producers can reach international buyers</li>
-        </ul>
-        <div class="eco-cta"><a class="btn" href="#contact">Register as a farmer or buyer</a></div>
-      </div>
-      <figure class="eco-photo"><img src="https://images.unsplash.com/photo-1627989147125-a004d05946d3?q=70&w=1000&auto=format&fit=crop" alt="Fresh vegetables in a woven basket — verified produce moving from farm to buyer" loading="lazy"></figure>
-    </div>
- 
-    <div class="eco-panel" role="tabpanel">
-      <div>
-        <h3>Climate &amp; Advisory</h3>
-        <p>We monitor climate patterns and design practical climate solutions for agriculture — for governments, businesses, and partners within Nigeria and beyond.</p>
-        <ul>
-          <li>Climate-smart agriculture design for public and private projects</li>
-          <li>Advisory and consultation across the full agricultural value chain</li>
-          <li>Drone and AI-assisted monitoring for farms and programs</li>
-          <li>Cross-border scope: built for Africa, not just Nigeria</li>
-        </ul>
-        <div class="eco-cta"><a class="btn" href="#contact">Book a consultation</a></div>
-      </div>
-      <figure class="eco-photo"><img src="https://images.unsplash.com/photo-1509110646989-7ca4308edb3e?q=70&w=1000&auto=format&fit=crop" alt="Aerial view of green farmland — drone and AI monitoring in action" loading="lazy"></figure>
-    </div>
- 
-    <div class="eco-panel" role="tabpanel">
-      <div>
-        <h3>Events &amp; Community</h3>
-        <p>AgriRenew is society-based. We give back — to communities, to Nigeria, to Africa — through education, events, and grassroots empowerment.</p>
-        <ul>
-          <li>Seminars, workshops, and agricultural innovation events</li>
-          <li>Community empowerment and youth development programs</li>
-          <li>Training in AI, media, and technology for agriculture</li>
-          <li>Support for local producers to grow, sell, and export</li>
-        </ul>
-        <div class="eco-cta"><a class="btn" href="#contact">Invite us to your event</a></div>
-      </div>
-      <figure class="eco-photo"><img src="https://images.unsplash.com/photo-1473605768212-7e1f2c756179?q=70&w=1000&auto=format&fit=crop" alt="Rural community life — the people at the centre of everything AgriRenew builds" loading="lazy"></figure>
+    <div class="car" id="car-crops" tabindex="0" aria-label="Crops we work with">
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=70&w=700&auto=format&fit=crop" alt="Maize plants growing in rows" loading="lazy"><figcaption><b>Maize</b><span>Staple grain · feed · residue for briquettes</span></figcaption></figure>
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1629398781739-9caec1eb9409?q=70&w=700&auto=format&fit=crop" alt="Ripe tomatoes in a woven basket" loading="lazy"><figcaption><b>Tomatoes</b><span>High-value vegetable · post-harvest care</span></figcaption></figure>
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1515276427842-f85802d514a2?q=70&w=700&auto=format&fit=crop" alt="Hands holding harvested grain" loading="lazy"><figcaption><b>Rice &amp; cereals</b><span>Husks and straw become clean fuel</span></figcaption></figure>
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1627989147125-a004d05946d3?q=70&w=700&auto=format&fit=crop" alt="Mixed fresh vegetables" loading="lazy"><figcaption><b>Vegetables</b><span>Peppers, leafy greens, okra, onions</span></figcaption></figure>
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=70&w=700&auto=format&fit=crop" alt="A golden field of grain at sunset" loading="lazy"><figcaption><b>Sorghum &amp; millet</b><span>Drought-tolerant grains for the north</span></figcaption></figure>
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1622676566956-b42b50c84c31?q=70&w=700&auto=format&fit=crop" alt="A farmer on green pasture" loading="lazy"><figcaption><b>Livestock &amp; pasture</b><span>Cattle, goats, poultry and manure</span></figcaption></figure>
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=70&w=700&auto=format&fit=crop" alt="Neat rows of young crops in a field" loading="lazy"><figcaption><b>Cassava &amp; tubers</b><span>Cassava, yam and potato systems</span></figcaption></figure>
+      <figure class="crop"><img src="https://images.unsplash.com/photo-1602516818688-715dfc1b77d5?q=70&w=700&auto=format&fit=crop" alt="Green farmland under open sky" loading="lazy"><figcaption><b>Legumes</b><span>Soybean, cowpea and groundnut for soil health</span></figcaption></figure>
     </div>
   </div>
 </section>
- 
-<!-- ================= CLIMATE ================= -->
+
+<!-- ================= CLIMATE + SDGs ================= -->
 <section class="climate" id="climate">
   <div class="climate-bg" style="background-image:url('https://images.unsplash.com/photo-1618265317491-8b7b2324320e?q=70&w=1800&auto=format&fit=crop')" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow">Climate action, built in</p>
     <h2>Every briquette is a climate solution</h2>
-    <p class="lede">We don't bolt climate action onto our business — it is the business. Diverting farm waste from open burning, replacing charcoal and firewood, and keeping trees standing: that's what our loop does every single day.</p>
+    <p class="lede">Diverting farm waste from open burning, replacing charcoal and firewood, and keeping trees standing: our loop does this every day.</p>
     <div class="climate-grid">
-      <div class="cl-card rv">
-        <svg class="ic" viewBox="0 0 44 44" fill="none"><path d="M10 34c10-2 12-12 14-20 3 8 5 16 12 20" stroke="#3E9B6E" stroke-width="2.6" stroke-linecap="round"/><path d="M6 34h32" stroke="#D4A73C" stroke-width="2.4" stroke-linecap="round"/></svg>
-        <h3>Waste diverted, emissions avoided</h3>
-        <p>Crop residues that would be burned in the open or left to rot become clean cooking fuel instead — cutting smoke, methane, and haze at the source.</p>
-      </div>
-      <div class="cl-card rv">
-        <svg class="ic" viewBox="0 0 44 44" fill="none"><path d="M22 36V16M22 22c-8-1-12-8-12-14 8 0 13 5 12 14ZM22 22c8-1 12-8 12-14-8 0-13 5-12 14Z" stroke="#3E9B6E" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
-        <h3>Forests kept standing</h3>
-        <p>Every household that cooks with our bio-briquettes is a household not buying charcoal — directly reducing the pressure that drives deforestation across the region.</p>
-      </div>
-      <div class="cl-card rv">
-        <svg class="ic" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="15" stroke="#D4A73C" stroke-width="2.2"/><path d="M12 24c6-8 14-8 20-4M14 30c5-4 11-5 16-2" stroke="#3E9B6E" stroke-width="2.2" stroke-linecap="round"/></svg>
-        <h3>Climate-smart design for others</h3>
-        <p>We design and advise on climate solutions for governments and businesses — bringing field-tested, Africa-first methods to agriculture programs beyond our own.</p>
-      </div>
+      <div class="cl-card"><h3>Waste diverted, emissions avoided</h3><p>Crop residues that would be burned in the open become clean cooking fuel instead, cutting smoke and haze at the source.</p></div>
+      <div class="cl-card"><h3>Forests kept standing</h3><p>Every household cooking with our bio-briquettes is not buying charcoal, which reduces the pressure behind deforestation.</p></div>
+      <div class="cl-card"><h3>Climate-smart design for others</h3><p>We design and advise on climate solutions for governments and businesses, bringing field-tested, Africa-first methods to their programmes.</p></div>
+    </div>
+    <div class="sdgs">
+      <p class="mono">Aligned with the UN Sustainable Development Goals</p>
+      <ul>
+        <li><b>1</b>No poverty</li>
+        <li><b>2</b>Zero hunger</li>
+        <li><b>4</b>Quality education</li>
+        <li><b>7</b>Clean energy</li>
+        <li><b>8</b>Decent work</li>
+        <li><b>13</b>Climate action</li>
+        <li><b>15</b>Life on land</li>
+      </ul>
     </div>
   </div>
 </section>
- 
-<!-- ================= FARMER CREDIT STEPS ================= -->
+
+<!-- ================= FARMER CREDIT ================= -->
 <section class="steps" id="credit">
   <div class="wrap">
     <p class="eyebrow">The farmer partnership</p>
-    <h2>How the credit program works</h2>
-    <p class="lede">A real sequence, not a slogan. Waste goes in on day one — value keeps coming back for as long as you farm with us.</p>
-    <div class="steps-grid">
-      <div class="step rv">
-        <svg class="ic" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="17" stroke="#D4A73C" stroke-width="2"/><path d="M13 20h14M20 13v14" stroke="#3E9B6E" stroke-width="2.6" stroke-linecap="round"/></svg>
-        <h3>Register free</h3>
-        <p>Sign up for the waste-to-energy program. We open your AgriRenew farmer account and train you on collecting and preserving farm waste.</p>
+    <h2>How the credit programme works</h2>
+    <p class="lede">Waste goes in on day one, and value keeps coming back for as long as you farm with us.</p>
+    <ol class="steps-grid">
+      <li class="step"><h3>Register free</h3><p>We open your AgriRenew farmer account and train you to collect and store farm waste.</p></li>
+      <li class="step"><h3>Supply your waste</h3><p>Deliver crop residues and farm waste. Every delivery is logged to your account.</p></li>
+      <li class="step"><h3>Build credit</h3><p>Your delivery volume sets your credit level and your eligibility for input loans, equipment and land support.</p></li>
+      <li class="step"><h3>Grow &amp; sell</h3><p>Buy briquettes below market price, take input loans, and sell produce to us early at protected prices or list it on the marketplace.</p></li>
+    </ol>
+    <a class="btn" href="#contact" data-topic="Farmer / cooperative">Register as a farmer</a>
+  </div>
+</section>
+
+<!-- ================= PARTNERS & GRANTS ================= -->
+<section class="partners" id="partners">
+  <div class="wrap">
+    <p class="eyebrow">For governments, donors &amp; institutions</p>
+    <h2>A delivery partner your programme can rely on</h2>
+    <p class="lede">We turn agriculture budgets into results on the ground, and we report them in the formats funders and public institutions require.</p>
+    <div class="partner-grid">
+      <div class="pcol">
+        <h3>How we engage</h3>
+        <ul class="engage">
+          <li><b>Grant partnerships</b><span>Co-design and deliver donor-funded projects as implementing partner.</span></li>
+          <li><b>Government contracts</b><span>Extension services, farmer registration, input distribution, training and youth-in-agriculture schemes.</span></li>
+          <li><b>Public–private partnerships</b><span>Waste-to-energy plants, aggregation hubs and processing centres.</span></li>
+          <li><b>Corporate &amp; CSR programmes</b><span>Outgrower schemes, supplier development and community projects.</span></li>
+          <li><b>Research collaboration</b><span>Field trials and data collection with universities and institutes.</span></li>
+        </ul>
       </div>
-      <div class="step rv">
-        <svg class="ic" viewBox="0 0 40 40" fill="none"><path d="M8 28h24M12 28V16l8-6 8 6v12" stroke="#D4A73C" stroke-width="2" stroke-linejoin="round"/><path d="M17 28v-7h6v7" stroke="#3E9B6E" stroke-width="2"/></svg>
-        <h3>Supply your waste</h3>
-        <p>Deliver crop residues and farm waste from your fields. Every delivery is logged to your account and becomes briquette feedstock.</p>
+      <div class="pcol">
+        <h3>Impact we measure and report</h3>
+        <ul class="kpis">
+          <li>Tonnes of farm waste diverted from burning</li>
+          <li>Households switched to clean cooking fuel</li>
+          <li>Farmers registered, trained and financed</li>
+          <li>Hectares under climate-smart practice</li>
+          <li>Yield and income change against baseline</li>
+          <li>Youth and women reached</li>
+        </ul>
+        <h3 style="margin-top:28px">Why partners choose us</h3>
+        <ul class="why">
+          <li>Development Bank of Nigeria equipment grant already delivered</li>
+          <li>12+ years of field operations across several Nigerian states</li>
+          <li>200+ professionals trained</li>
+          <li>One team covering energy, finance, training, markets and climate</li>
+        </ul>
       </div>
-      <div class="step rv">
-        <svg class="ic" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="#D4A73C" stroke-width="2"/><path d="M20 12v16M15 16.5c0-2 2.2-3.2 5-3.2s5 1.2 5 3.2-2.2 2.8-5 3.4-5 1.4-5 3.4 2.2 3.2 5 3.2 5-1.2 5-3.2" stroke="#3E9B6E" stroke-width="2" stroke-linecap="round"/></svg>
-        <h3>Build credit</h3>
-        <p>Your delivery volume sets your credit level — and your eligibility for input loans, equipment, and land support.</p>
+    </div>
+    <div class="partner-cta">
+      <div>
+        <h3>Request our capability statement</h3>
+        <p>Company profile, past work, team and delivery approach, ready for your procurement or grant file.</p>
       </div>
-      <div class="step rv">
-        <svg class="ic" viewBox="0 0 40 40" fill="none"><path d="M8 30c8-2 10-10 12-16 2 6 4 14 12 16" stroke="#3E9B6E" stroke-width="2.4" stroke-linecap="round"/><circle cx="20" cy="10" r="4" fill="#D4A73C"/></svg>
-        <h3>Grow &amp; sell back</h3>
-        <p>Buy briquettes below market price, take input loans, and sell produce to us early at protected prices — or list it on the marketplace.</p>
-      </div>
+      <a class="btn" href="#contact" data-topic="Government / institution">Request it now</a>
     </div>
   </div>
 </section>
- 
+
 <!-- ================= TRACK RECORD ================= -->
-<section id="impact">
+<section class="impact" id="impact">
   <div class="wrap">
     <p class="eyebrow">Proof, not promises</p>
     <h2>A track record you can verify</h2>
-    <p class="lede">We use this page when applying for grants, projects, and partnerships — so everything here is real work we can stand behind.</p>
     <div class="proof-grid">
-      <div class="stat rv"><b>12+</b><span>Years of hands-on agribusiness: crops, cereals, vegetables, livestock, and fish across multiple states</span></div>
-      <div class="stat rv"><b>200+</b><span>Professionals trained across data, technology, and agriculture</span></div>
-      <div class="stat rv"><b>DBN</b><span>Development Bank of Nigeria equipment grant for briquette production machinery</span></div>
-      <div class="stat rv"><b>Hectares</b><span>Cultivated across different parts of Nigeria, spanning crop and animal production</span></div>
+      <div class="stat"><b>12+</b><span>Years of hands-on agribusiness: crops, cereals, vegetables, livestock and fish across several states</span></div>
+      <div class="stat"><b>200+</b><span>Professionals trained across data, technology and agriculture</span></div>
+      <div class="stat"><b>DBN</b><span>Development Bank of Nigeria equipment grant for briquette production machinery</span></div>
+      <div class="stat"><b>6</b><span>Integrated divisions working as one loop</span></div>
     </div>
+    <!-- Replace these stand-in photos with your own photos of trainings, farm work, briquette production and events. -->
     <div class="gallery">
-      <!-- REPLACE the src below with your own real photos when ready -->
-      <figure class="shot rv"><img src="https://images.unsplash.com/photo-1602516818688-715dfc1b77d5?q=70&w=900&auto=format&fit=crop" alt="Green farmland under open sky" loading="lazy"><figcaption>Field operations — crop production across hectares</figcaption></figure>
-      <figure class="shot rv"><img src="https://images.unsplash.com/photo-1741940365425-1b9a575d373e?q=70&w=900&auto=format&fit=crop" alt="Farmer carrying biomass bundle" loading="lazy"><figcaption>Biomass collection for briquette production</figcaption></figure>
-      <figure class="shot rv"><img src="https://images.unsplash.com/photo-1515276427842-f85802d514a2?q=70&w=900&auto=format&fit=crop" alt="Hands holding harvested grain" loading="lazy"><figcaption>Cereal and grain production</figcaption></figure>
-      <figure class="shot rv"><img src="https://images.unsplash.com/photo-1629398781739-9caec1eb9409?q=70&w=900&auto=format&fit=crop" alt="Tomatoes in woven basket" loading="lazy"><figcaption>Fresh produce headed for the marketplace</figcaption></figure>
-      <figure class="shot rv"><img src="https://images.unsplash.com/photo-1622676566956-b42b50c84c31?q=70&w=900&auto=format&fit=crop" alt="Farmer resting on green pasture" loading="lazy"><figcaption>Livestock and pasture management</figcaption></figure>
-      <figure class="shot rv"><img src="https://images.unsplash.com/photo-1509110646989-7ca4308edb3e?q=70&w=900&auto=format&fit=crop" alt="Aerial view of farmland" loading="lazy"><figcaption>Drone-assisted field monitoring</figcaption></figure>
+      <figure class="shot"><img src="https://images.unsplash.com/photo-1602516818688-715dfc1b77d5?q=70&w=900&auto=format&fit=crop" alt="Green farmland under open sky" loading="lazy"><figcaption>Field operations</figcaption></figure>
+      <figure class="shot"><img src="https://images.unsplash.com/photo-1741940365425-1b9a575d373e?q=70&w=900&auto=format&fit=crop" alt="Farmer carrying a biomass bundle" loading="lazy"><figcaption>Biomass collection</figcaption></figure>
+      <figure class="shot"><img src="https://images.unsplash.com/flagged/photo-1605816140734-df2c839f0b75?q=70&w=900&auto=format&fit=crop" alt="Baled agricultural residue" loading="lazy"><figcaption>Residue ready for briquettes</figcaption></figure>
+      <figure class="shot"><img src="https://images.unsplash.com/photo-1740741706386-0a211c4a87df?q=70&w=900&auto=format&fit=crop" alt="A woman farmer in her field" loading="lazy"><figcaption>Partner farmers</figcaption></figure>
+      <figure class="shot"><img src="https://images.unsplash.com/photo-1509110646989-7ca4308edb3e?q=70&w=900&auto=format&fit=crop" alt="Aerial view of farmland" loading="lazy"><figcaption>Drone-assisted monitoring</figcaption></figure>
+      <figure class="shot"><img src="https://images.unsplash.com/photo-1473605768212-7e1f2c756179?q=70&w=900&auto=format&fit=crop" alt="Rural community life" loading="lazy"><figcaption>Community programmes</figcaption></figure>
     </div>
-    <p class="gallery-note">These are open-license stand-in images. Replace them with your own photos of trainings, farm work, briquette production, and community events — real photos of your team will make grant reviewers trust the page instantly.</p>
   </div>
 </section>
- 
-<!-- ================= VIDEO ================= -->
-<section class="video" id="watch">
+
+<!-- ================= VIDEOS ================= -->
+<section class="videos" id="watch">
   <div class="wrap">
-    <p class="eyebrow">See it in motion</p>
-    <h2>Watch AgriRenew at work</h2>
-    <p class="lede">A short demo of the waste-to-wealth loop — from farm residue to clean cooking fuel to farmer credit.</p>
-    <!-- TO ADD YOUR VIDEO: upload it to YouTube, then replace this whole .video-frame block's contents
-         with: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="AgriRenew Africa demo" allowfullscreen></iframe> -->
-    <div class="video-frame rv">
-      <div class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#231a05"><path d="M8 5v14l11-7z"/></svg></div>
-      <p>Demo video coming soon — this frame is ready for your YouTube embed. One line of code and it plays right here.</p>
+    <div class="row-head">
+      <div>
+        <p class="eyebrow">See it in motion</p>
+        <h2>Watch AgriRenew at work</h2>
+      </div>
+      <div class="car-arrows">
+        <button type="button" class="car-btn" data-car="videos" data-dir="-1" aria-label="Scroll videos left">←</button>
+        <button type="button" class="car-btn" data-car="videos" data-dir="1" aria-label="Scroll videos right">→</button>
+      </div>
+    </div>
+    <!-- To add a video: upload it to YouTube and put its ID (the part after v= in the link) in data-video. -->
+    <div class="car" id="car-videos" tabindex="0" aria-label="Videos">
+      <div class="vid" data-video="" data-title="From farm waste to clean fuel">
+        <div class="vid-poster" style="background-image:url('https://images.unsplash.com/flagged/photo-1605816140734-df2c839f0b75?q=70&w=900&auto=format&fit=crop')"><button type="button" class="play" aria-label="Play: From farm waste to clean fuel"></button></div>
+        <h3>From farm waste to clean fuel</h3><p>How crop residue becomes bio-briquettes.</p>
+      </div>
+      <div class="vid" data-video="" data-title="Inside the AgriRenew Academy">
+        <div class="vid-poster" style="background-image:url('https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?q=70&w=900&auto=format&fit=crop')"><button type="button" class="play" aria-label="Play: Inside the AgriRenew Academy"></button></div>
+        <h3>Inside the AgriRenew Academy</h3><p>Field classes in crop, livestock and fish farming.</p>
+      </div>
+      <div class="vid" data-video="" data-title="Farmer credit, explained">
+        <div class="vid-poster" style="background-image:url('https://images.unsplash.com/photo-1740741706386-0a211c4a87df?q=70&w=900&auto=format&fit=crop')"><button type="button" class="play" aria-label="Play: Farmer credit, explained"></button></div>
+        <h3>Farmer credit, explained</h3><p>How waste deliveries unlock inputs and loans.</p>
+      </div>
+      <div class="vid" data-video="" data-title="Drones on the farm">
+        <div class="vid-poster" style="background-image:url('https://images.unsplash.com/photo-1509110646989-7ca4308edb3e?q=70&w=900&auto=format&fit=crop')"><button type="button" class="play" aria-label="Play: Drones on the farm"></button></div>
+        <h3>Drones on the farm</h3><p>Monitoring crop health from the air.</p>
+      </div>
     </div>
   </div>
 </section>
- 
-<!-- ================= TESTIMONIES ================= -->
-<section class="testis" id="voices">
+
+<!-- ================= INSIGHTS (knowledge hub) ================= -->
+<section class="insights" id="insights">
   <div class="wrap">
-    <p class="eyebrow">Testimonies</p>
-    <h2>Voices from the field</h2>
-    <p class="lede">The people we train, finance, and trade with — in their own words.</p>
-    <!-- IMPORTANT: These are sample placeholders. Replace each quote, name, and role with REAL
-         testimonies from your trainees, farmers, and partners before publishing. -->
-    <div class="testi-track">
-      <div class="testi rv">
-        <div class="quote-mark">"</div>
-        <p>[Replace with a real quote from an Academy graduate — e.g. what they learned, and the agribusiness they started afterwards.]</p>
-        <div class="who"><div class="init">A</div><div><b>Academy graduate</b><span>Crop production track</span></div></div>
-      </div>
-      <div class="testi rv">
-        <div class="quote-mark">"</div>
-        <p>[Replace with a real quote from a partner farmer in the credit program — e.g. how supplying waste earned them cheaper briquettes or an input loan.]</p>
-        <div class="who"><div class="init">F</div><div><b>Partner farmer</b><span>Waste-to-energy program</span></div></div>
-      </div>
-      <div class="testi rv">
-        <div class="quote-mark">"</div>
-        <p>[Replace with a real quote from a buyer, client, or event host — e.g. produce quality from the marketplace, or a seminar you delivered.]</p>
-        <div class="who"><div class="init">P</div><div><b>Partner / buyer</b><span>Marketplace &amp; events</span></div></div>
+    <p class="eyebrow">Insights &amp; guides</p>
+    <h2>Practical knowledge for farmers and partners</h2>
+    <p class="lede">Short, field-tested guides from our team. Select a topic, then open any guide to read it.</p>
+    <div class="filters" id="insightFilters" role="group" aria-label="Filter guides by topic"></div>
+    <div class="post-grid" id="postGrid"></div>
+  </div>
+</section>
+
+<dialog class="reader" id="reader" aria-labelledby="readerTitle">
+  <div class="reader-inner">
+    <button type="button" class="reader-close" id="readerClose" aria-label="Close guide">✕</button>
+    <p class="mono" id="readerMeta"></p>
+    <h2 id="readerTitle"></h2>
+    <div id="readerBody"></div>
+    <a class="btn" href="#contact" id="readerCta">Ask our team about this</a>
+  </div>
+</dialog>
+
+<!-- ================= ACADEMY ================= -->
+<section class="academy" id="academy">
+  <div class="wrap academy-grid">
+    <figure class="academy-img"><img src="https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?q=70&w=1000&auto=format&fit=crop" alt="A trainee tending crops in a demonstration field" loading="lazy"></figure>
+    <div>
+      <p class="eyebrow">AgriRenew Academy</p>
+      <h2>Learn agriculture the way it is actually done</h2>
+      <p class="lede">Practical, business-first courses that take learners from curiosity to a running agribusiness. Lessons, assignments and class updates all happen in one online classroom, with field days on real farms.</p>
+      <ul class="tracks">
+        <li>Crop production &amp; soil science</li>
+        <li>Poultry, livestock &amp; fish farming</li>
+        <li>Drones, AI &amp; precision agriculture</li>
+        <li>Agribusiness, finance &amp; export readiness</li>
+        <li>Climate-smart agriculture</li>
+        <li>Waste-to-energy &amp; briquette production</li>
+      </ul>
+      <div class="hero-ctas">
+        <a class="btn" href="https://exceedingv.github.io/agrirenew-academy/" rel="noopener">Visit the Academy</a>
+        <a class="btn ghost" href="#contact" data-topic="Academy enrolment">Enrol or train your staff</a>
       </div>
     </div>
   </div>
 </section>
- 
+
 <!-- ================= TEAM ================= -->
 <section class="team" id="team">
   <div class="wrap">
     <p class="eyebrow">Leadership</p>
     <h2>The people behind AgriRenew</h2>
     <div class="team-grid">
-      <div class="person rv">
+      <div class="person">
         <div class="avatar">VO</div>
         <div>
           <h3>Victor Okeke</h3>
           <p class="role">General Manager</p>
-          <p>Over 12 years of agribusiness experience spanning cereal and crop planting, vegetable production, livestock and fish farming across hectares in different parts of Nigeria. Victor combines deep field experience with a technology background — AI, data analytics, and automation — and has trained 200+ professionals. He leads AgriRenew's vision of agriculture that is scalable, affordable, and possible for everyone.</p>
+          <p>Over 12 years of agribusiness experience spanning cereal and crop planting, vegetable production, and livestock and fish farming across hectares in different parts of Nigeria. Victor combines deep field experience with data and technology to lead AgriRenew's growth.</p>
         </div>
       </div>
-      <div class="person rv">
+      <div class="person">
         <div class="avatar">GA</div>
         <div>
           <h3>Gracious Alo</h3>
           <p class="role">Head of Operations</p>
-          <p>Co-founder with hands-on expertise in digital marketing, web development, and social media management. Gracious leads AgriRenew's digital presence and offers social media account management for agricultural brands — helping farmers, agribusinesses, and partners tell their story and reach their market online.</p>
+          <p>Co-founder with hands-on expertise in digital marketing, web development and social media management. Gracious leads AgriRenew's operations and digital presence, and manages social media for agricultural businesses.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
- 
-<!-- ================= FAQ ================= -->
-<section class="faq" id="faq">
+
+<!-- ================= TESTIMONIES (hidden until real quotes are ready) =================
+  To publish: replace the text below with real quotes, names and roles, then remove this comment wrapper.
+<section class="testis" id="voices">
   <div class="wrap">
-    <p class="eyebrow">Questions, answered</p>
-    <h2>Frequently asked questions</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Is AgriRenew Africa only a briquette company?</button>
-        <div class="faq-a"><p>No. Waste-to-energy is one division inside a full ecosystem that also includes the AgriRenew Academy, a farmer credit and inputs program, a verified produce marketplace, climate advisory services, and community programs.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How does AgriRenew fight climate change?</button>
-        <div class="faq-a"><p>Three ways at once: we divert farm waste from open burning, our briquettes replace charcoal and firewood (reducing deforestation pressure), and we design climate-smart agriculture solutions for governments and businesses across Africa.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How do I join the farmer credit program?</button>
-        <div class="faq-a"><p>Registration is free. Contact us to open your farmer account, get trained on waste collection, and start supplying farm waste. Your delivery volume builds your credit level, which determines your access to discounted briquettes, input loans, equipment, and land support.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What does the Academy teach?</button>
-        <div class="faq-a"><p>Practical crop production (including soil texture and nature), livestock, poultry, and fish farming, plus modern tools — AI in agriculture, drones, and agri-media. Every program is designed so graduates can launch their own agribusiness.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Can buyers trust the marketplace?</button>
-        <div class="faq-a"><p>Yes. Every farmer on the marketplace is verified, their production parameters are captured, and they are licensed by AgriRenew before they can list. Buyers get traceable produce at fair prices.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Do you work outside Nigeria?</button>
-        <div class="faq-a"><p>Yes — AgriRenew is built for Africa. We design climate and agricultural solutions for governments and businesses beyond Nigeria, and we help producers get licensed to export their goods internationally.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How can I partner with or fund AgriRenew?</button>
-        <div class="faq-a"><p>We welcome grant bodies, development partners, corporates, and governments. Our Development Bank of Nigeria equipment grant and 12+ years of field work give partners a verifiable foundation. Reach out through the contact section below.</p></div>
-      </div>
+    <p class="eyebrow">Testimonies</p>
+    <h2>Voices from the field</h2>
+    <div class="testi-grid">
+      <blockquote class="testi"><p>REAL QUOTE FROM AN ACADEMY GRADUATE</p><footer><b>Name</b><span>Crop production track</span></footer></blockquote>
+      <blockquote class="testi"><p>REAL QUOTE FROM A PARTNER FARMER</p><footer><b>Name</b><span>Waste-to-energy programme</span></footer></blockquote>
+      <blockquote class="testi"><p>REAL QUOTE FROM A PARTNER OR BUYER</p><footer><b>Name</b><span>Marketplace</span></footer></blockquote>
     </div>
   </div>
 </section>
- 
+-->
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <p class="eyebrow">Questions, answered</p>
+      <h2>Frequently asked questions</h2>
+      <p class="lede">Can't find your answer? <a href="#contact">Send us a message</a>.</p>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Is AgriRenew Africa only a briquette company?</summary><p>No. Waste-to-energy is one division inside a full ecosystem that also includes consultancy, the AgriRenew Academy, a farmer credit and inputs programme, a verified produce marketplace, climate advisory and community programmes.</p></details>
+      <details><summary>Can AgriRenew implement government or donor-funded programmes?</summary><p>Yes. We act as implementing partner for farmer registration, training, input distribution, waste-to-energy and climate-smart agriculture projects, and we report against your programme indicators. Contact us to request our capability statement.</p></details>
+      <details><summary>How does AgriRenew fight climate change?</summary><p>Three ways at once: we divert farm waste from open burning, our briquettes replace charcoal and firewood, and we design climate-smart agriculture solutions for governments and businesses.</p></details>
+      <details><summary>Do you use GMO seeds?</summary><p>No. We work with certified non-GMO seed, and we promote healthy soil, crop rotation and careful use of fertilisers and crop protection.</p></details>
+      <details><summary>How do I join the farmer credit programme?</summary><p>Registration is free. Contact us to open your farmer account, get trained on waste collection and start supplying farm waste. Your delivery volume builds your credit level.</p></details>
+      <details><summary>What does the Academy teach?</summary><p>Crop production and soil science, livestock, poultry and fish farming, drones and AI in agriculture, agribusiness and export readiness. Every course ends with a practical project.</p></details>
+      <details><summary>Can buyers trust the marketplace?</summary><p>Yes. Every farmer is verified, their production details are recorded, and they are licensed by AgriRenew before they can list.</p></details>
+      <details><summary>Do you work outside Nigeria?</summary><p>Yes. AgriRenew is built for Africa. We design agriculture and climate solutions for partners beyond Nigeria and help producers get licensed to export.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
 <section class="contact" id="contact">
   <div class="wrap contact-grid">
     <div>
       <p class="eyebrow">Let's work together</p>
       <h2>Talk to AgriRenew Africa</h2>
-      <p class="lede" style="margin-bottom:26px">Whether you're a farmer joining the credit program, a student enrolling in the Academy, a buyer for the marketplace, or a partner designing climate solutions — this is where it starts.</p>
-      <a class="btn" href="mailto:agrirenewafrica@gmail.com">Send us a message</a>
+      <p class="lede">Tell us who you are and what you need. We reply within two working days.</p>
+      <div class="contact-card">
+        <div class="contact-line"><b>Phone</b><span>0808 938 5865 · 0807 250 8525</span></div>
+        <div class="contact-line"><b>Email</b><span id="orgEmail">agrirenewafrica@gmail.com</span></div>
+        <div class="contact-line"><b>Zoom</b><span>Virtual consultations, link on request</span></div>
+        <div class="contact-line"><b>Base</b><span>Abuja, Nigeria · Serving all of Africa</span></div>
+      </div>
     </div>
-    <div class="contact-card rv">
-      <h3>Reach us directly</h3>
-      <div class="contact-line"><b>Phone</b><span>0808 938 5865 &nbsp;·&nbsp; 0807 250 8525</span></div>
-      <div class="contact-line"><b>Email</b><span>agrirenewafrica@gmail.com</span></div>
-      <div class="contact-line"><b>Zoom</b><span>Book a virtual consultation — link on request</span></div>
-      <div class="contact-line"><b>Base</b><span>Abuja, Nigeria · Serving all of Africa</span></div>
-      <div class="contact-line"><b>Social</b><span>Add your Instagram / Facebook / LinkedIn / TikTok handles here</span></div>
-    </div>
+    <form class="form" id="contactForm" novalidate>
+      <div class="row2">
+        <div class="field"><label for="f-name">Full name</label><input id="f-name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="f-org">Organisation</label><input id="f-org" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field">
+        <label for="f-topic">I am a…</label>
+        <select id="f-topic">
+          <option>Government / institution</option>
+          <option>Development partner / donor</option>
+          <option>Investor / agribusiness</option>
+          <option>Farmer / cooperative</option>
+          <option>Buyer (marketplace)</option>
+          <option>Academy enrolment</option>
+          <option>Briquette order</option>
+          <option>Media / events</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-msg">How can we help?</label><textarea id="f-msg" rows="5" placeholder="Your project, location, timeline and budget, if known."></textarea></div>
+      <p class="form-error" id="formError" role="alert" hidden></p>
+      <button type="submit" class="btn">Prepare my message</button>
+      <div class="sent" id="sent" hidden>
+        <b>Your message is ready. Send it to <span class="email-slot"></span></b>
+        <pre id="sentBody"></pre>
+        <div class="sent-acts">
+          <a class="btn" id="mailLink" href="#">Open in email app</a>
+          <button type="button" class="btn ghost" id="copyBtn">Copy message</button>
+        </div>
+      </div>
+    </form>
   </div>
 </section>
- 
-<footer>
-  <div class="wrap">
-    <span>© 2026 AgriRenew Africa Ltd. Agriculture — scalable, affordable, possible.</span>
-    <span class="mono" style="color:#D4A73C">Nothing wasted · Everything renewed</span>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top"><span>Agri<em>Renew</em> Africa</span></a>
+      <p>Agriculture: scalable, affordable, possible.</p>
+      <p class="mono gold">Nothing wasted · Everything renewed</p>
+    </div>
+    <nav aria-label="Company"><b>Company</b><a href="#story">About</a><a href="#team">Team</a><a href="#impact">Track record</a><a href="#faq">FAQ</a></nav>
+    <nav aria-label="Work with us"><b>Work with us</b><a href="#services">Consultancy</a><a href="#partners">Partners &amp; grants</a><a href="#credit">Farmer credit</a><a href="#academy">Academy</a></nav>
+    <nav aria-label="Learn"><b>Learn</b><a href="#insights">Insights</a><a href="#watch">Videos</a><a href="#crops">Crops</a><a href="#climate">Climate</a></nav>
   </div>
+  <div class="wrap foot-base">© <span id="year">2026</span> AgriRenew Africa Ltd. All rights reserved.</div>
 </footer>
- 
-<script>
-// Mobile nav
-const burger=document.getElementById('burger'),navlinks=document.getElementById('navlinks');
-burger.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');burger.setAttribute('aria-expanded',open)});
-navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
- 
-// Hero rolling slideshow
-const slides=[...document.querySelectorAll('.hero-slides .slide')];
-const dotsWrap=document.getElementById('heroDots');
-let cur=0,heroTimer;
-slides.forEach((_,i)=>{
-  const d=document.createElement('button');
-  d.setAttribute('aria-label','Show slide '+(i+1));
-  if(i===0)d.classList.add('on');
-  d.addEventListener('click',()=>{goSlide(i);restartHero()});
-  dotsWrap.appendChild(d);
-});
-const dots=[...dotsWrap.children];
-function goSlide(i){
-  slides[cur].classList.remove('on');dots[cur].classList.remove('on');
-  cur=i;slides[cur].classList.add('on');dots[cur].classList.add('on');
-}
-function nextSlide(){goSlide((cur+1)%slides.length)}
-function restartHero(){clearInterval(heroTimer);heroTimer=setInterval(nextSlide,5200)}
-restartHero();
- 
-// Ecosystem tabs
-const tabs=[...document.querySelectorAll('.eco-tab')],panels=[...document.querySelectorAll('.eco-panel')];
-tabs.forEach(t=>t.addEventListener('click',()=>{
-  tabs.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false')});
-  panels.forEach(p=>p.classList.remove('active'));
-  t.classList.add('active');t.setAttribute('aria-selected','true');
-  panels[+t.dataset.tab].classList.add('active');
-}));
- 
-// Waste-to-wealth loop
-const loopData=[
- {t:'Farm waste in',d:'Registered farmers supply crop residues and farm waste from their fields — waste that would otherwise be burned or dumped.'},
- {t:'Clean energy out',d:'Our DBN-backed machinery converts that waste into bio-briquettes for cooking, with waste-to-electricity conversion in development.'},
- {t:'Credit earned',d:'Every waste delivery is logged to the farmer\'s AgriRenew account. Delivery volume builds their credit level.'},
- {t:'Farms grow',d:'Credit unlocks below-market briquettes, input loans, equipment, land support, and early purchase of produce at protected prices — so the farm grows and produces more waste to feed the loop.'}
-];
-const nodes=[...document.querySelectorAll('.loop-node')],readout=document.getElementById('loopReadout');
-function setLoop(i){
-  nodes.forEach(n=>n.classList.remove('active'));
-  nodes[i].classList.add('active');
-  readout.innerHTML='<b>'+loopData[i].t+'</b><p>'+loopData[i].d+'</p>';
-}
-nodes.forEach((n,i)=>{
-  n.addEventListener('click',()=>setLoop(i));
-  n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setLoop(i)}});
-});
-let loopIdx=0;const loopTimer=setInterval(()=>{loopIdx=(loopIdx+1)%4;setLoop(loopIdx)},4200);
-nodes.forEach(n=>n.addEventListener('click',()=>clearInterval(loopTimer)));
- 
-// FAQ accordion
-document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
-  const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.toggle('open');
-  q.setAttribute('aria-expanded',open);
-  a.style.maxHeight=open?a.scrollHeight+'px':'0';
-}));
- 
-// Scroll reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-</script>
+
+<div class="sticky-cta">
+  <a class="btn ghost" href="#partners">Partner</a>
+  <a class="btn" href="#contact">Talk to us</a>
+</div>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
