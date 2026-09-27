@@ -31,6 +31,10 @@ careers.html        careers page (assets/careers.css, assets/careers.js)
 
 To add or edit an Insights guide, edit the `POSTS` list in `assets/main.js`. The "How we work" steps are the `PROC` list in the same file.
 
+## Credentials
+
+The trust strip under the hero and the Credentials section both come from the `CREDS` list in `assets/main.js`. Only list relationships you can document. Names are shown as text badges; add an organisation's logo only with its written permission.
+
 ## Careers page
 
 `careers.html` (with `assets/careers.css` and `assets/careers.js`) has values, perks, teams, open roles, hiring steps and an application form.

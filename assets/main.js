@@ -68,6 +68,35 @@
     n.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); showLoop(i); } });
   });
 
+  /* ---------- credentials (single list feeds the trust strip and the credentials section) ----------
+     Only list relationships you can document. "strip: true" also shows the name in the strip under the hero. */
+  var CREDS = [
+    { group: 'Funded by', note: 'Grants and finance received', items: [
+      { mark: 'DBN', name: 'Development Bank of Nigeria', what: 'Equipment grant for briquette production machinery', strip: true }
+      /* Add the NGO or donor here, e.g. { mark: 'ABC', name: 'Full name', what: 'Grant for …', strip: true } */
+    ] },
+    { group: 'Registered & recognised by', note: 'Government, regulators and institutions we work with', items: [
+      { mark: 'CAC', name: 'Corporate Affairs Commission', what: 'Registered company: AgriRenew Africa Ltd', strip: true },
+      { mark: 'FMAFS', name: 'Federal Ministry of Agriculture and Food Security', what: 'Federal agriculture ministry', strip: true },
+      { mark: 'NAFDAC', name: 'National Agency for Food and Drug Administration and Control', what: 'Food and product regulator', strip: true },
+      { mark: 'NGX', name: 'Nigerian Exchange Group', what: 'Capital market institution', strip: true }
+    ] },
+    { group: 'Our team is trained by', note: 'Courses and certifications completed by AgriRenew staff', items: [
+      { mark: 'G', name: 'Google', what: 'Digital skills and technology training' },
+      { mark: 'AWS', name: 'Amazon Web Services (AWS)', what: 'Cloud computing training' },
+      { mark: 'at', name: 'atingi', what: 'Digital learning platform by GIZ' }
+      /* Add other agriculture institutes here, e.g. { mark: 'IITA', name: '…', what: '…' } */
+    ] }
+  ];
+  $('#credGroups').innerHTML = CREDS.map(function(g){
+    return '<div class="cred-group"><h3>' + esc(g.group) + '</h3><p>' + esc(g.note) + '</p>' + g.items.map(function(c){
+      return '<div class="cred"><span class="mono-badge" aria-hidden="true">' + esc(c.mark) + '</span><div><b>' + esc(c.name) + '</b><span>' + esc(c.what) + '</span></div></div>';
+    }).join('') + '</div>';
+  }).join('');
+  $('#trustList').innerHTML = CREDS.reduce(function(a, g){ return a.concat(g.items.filter(function(c){ return c.strip; })); }, []).map(function(c){
+    return '<li><abbr title="' + esc(c.name) + '">' + esc(c.mark) + '</abbr></li>';
+  }).join('');
+
   /* ---------- tab helper (who we serve, ecosystem) ---------- */
   function tabs(list, render){
     var btns = $$('[role="tab"]', list);
