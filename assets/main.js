@@ -147,6 +147,69 @@
       '<figure><img src="' + IMG(d.img, 1000) + '" alt="' + esc(d.alt) + '" loading="lazy"></figure>';
   });
 
+  /* ---------- process stepper ---------- */
+  var PROC = [
+    { t: 'Register & profile', img: 'photo-1740741706386-0a211c4a87df', who: 'Farmer + AgriRenew field officer',
+      p: 'The farmer joins free. A field officer visits, maps the farm and opens the farmer\'s AgriRenew account.',
+      rec: 'Farm location and size, crops grown, household and contact details' },
+    { t: 'Soil test & farm plan', img: 'photo-1464226184884-fa280b87c399', who: 'Field officer + agronomist',
+      p: 'We test the soil and agree a season plan: which crops, which inputs, and when to plant.',
+      rec: 'Soil texture and fertility results, recommended crops and input schedule' },
+    { t: 'Certified seed & planting', img: 'photo-1574943320219-553eb213f72d', who: 'Farmer, with input credit',
+      p: 'Farmers plant certified, non-GMO seed at the right spacing and time. Inputs can be taken on credit.',
+      rec: 'Seed variety and source, planting date, inputs issued on credit' },
+    { t: 'Crop care & monitoring', img: 'photo-1509110646989-7ca4308edb3e', who: 'Farmer + field officer + drone team',
+      p: 'Regular field visits and drone images catch pests, disease and water stress early.',
+      rec: 'Scouting notes, crop health images, treatments applied' },
+    { t: 'Harvest & post-harvest', img: 'photo-1515276427842-f85802d514a2', who: 'Farmer + AgriRenew buyers',
+      p: 'We advise on harvest timing and handling. Produce can be sold to AgriRenew at the agreed forward price or listed on the marketplace.',
+      rec: 'Yield per hectare, quality grade, volumes sold and prices' },
+    { t: 'Residue collection', img: 'photo-1741940365425-1b9a575d373e', who: 'Farmer + collection team',
+      p: 'Instead of burning stalks, husks and cobs, farmers bundle them for collection. Every load is weighed.',
+      rec: 'Residue type and weight, logged to the farmer\'s credit account' },
+    { t: 'Drying & preparation', img: 'flagged/photo-1605816140734-df2c839f0b75', who: 'Production team',
+      p: 'Residue is dried, sorted and crushed to an even size, then mixed with a natural binder.',
+      rec: 'Moisture level, batch number, feedstock mix' },
+    { t: 'Briquette pressing & quality', img: 'photo-1618265317491-8b7b2324320e', who: 'Production team, on DBN-funded equipment',
+      p: 'The mix is pressed into briquettes, dried again and checked for density, moisture and clean burning.',
+      rec: 'Batch output, quality test results, packaging date' },
+    { t: 'Distribution & credit', img: 'photo-1473605768212-7e1f2c756179', who: 'AgriRenew + partner farmers + households',
+      p: 'Briquettes reach households below charcoal prices. Partner farmers use their credit for inputs, equipment and land support, and the next season starts stronger.',
+      rec: 'Households supplied, credit balances, inputs issued for next season' }
+  ];
+  var procSteps = $('#procSteps'), procView = $('#procView'), procCur = 0;
+  procSteps.innerHTML = PROC.map(function(d, i){
+    return '<li><button type="button" role="tab" id="ps-' + i + '" aria-controls="procView" aria-selected="' + (i === 0) + '"' + (i ? ' tabindex="-1"' : '') + '>' + esc(d.t) + '</button></li>';
+  }).join('');
+  var procBtns = $$('button', procSteps);
+  function showProc(i, focus){
+    procCur = i;
+    procBtns.forEach(function(b, j){
+      b.setAttribute('aria-selected', String(j === i));
+      b.tabIndex = j === i ? 0 : -1;
+      b.classList.toggle('past', j < i);
+    });
+    var d = PROC[i];
+    procView.setAttribute('aria-labelledby', 'ps-' + i);
+    procView.innerHTML = '<figure><img src="' + IMG(d.img, 1000) + '" alt="" loading="lazy"><figcaption>Step ' + (i + 1) + ' of ' + PROC.length + '</figcaption></figure>' +
+      '<div class="proc-body"><h3>' + esc(d.t) + '</h3><p>' + esc(d.p) + '</p>' +
+      '<dl><div><dt>Who</dt><dd>' + esc(d.who) + '</dd></div><div><dt>What we record</dt><dd>' + esc(d.rec) + '</dd></div></dl>' +
+      '<div class="proc-nav">' + (i > 0 ? '<button type="button" class="btn ghost sm" data-proc="-1">← Previous</button>' : '') +
+      (i < PROC.length - 1 ? '<button type="button" class="btn sm" data-proc="1">Next step →</button>' : '<a class="btn sm" href="#credit">See the credit programme</a>') + '</div></div>';
+    if (focus) procBtns[i].focus();
+  }
+  procSteps.addEventListener('click', function(e){ var b = e.target.closest('button'); if (b) showProc(procBtns.indexOf(b)); });
+  procSteps.addEventListener('keydown', function(e){
+    var i = procBtns.indexOf(document.activeElement); if (i < 0) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight'){ e.preventDefault(); showProc(Math.min(i + 1, PROC.length - 1), true); }
+    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft'){ e.preventDefault(); showProc(Math.max(i - 1, 0), true); }
+  });
+  procView.addEventListener('click', function(e){
+    var b = e.target.closest('[data-proc]'); if (!b) return;
+    showProc(procCur + Number(b.getAttribute('data-proc')), true);
+  });
+  showProc(0);
+
   /* ---------- scroll carousels (crops, videos) ---------- */
   $$('.car-btn').forEach(function(b){
     b.addEventListener('click', function(){

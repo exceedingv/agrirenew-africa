@@ -24,8 +24,16 @@ GitHub Pages can publish from a private repository only on a paid GitHub plan (P
 ```
 index.html          the page
 assets/styles.css   styles
-assets/main.js      carousels, tabs, Insights guides, videos, enquiry form
+assets/main.js      carousels, tabs, process steps, Insights guides, videos, enquiry form
+careers.html        careers page (assets/careers.css, assets/careers.js)
 404.html, favicon.svg, robots.txt
 ```
 
-To add or edit an Insights guide, edit the `POSTS` list in `assets/main.js`.
+To add or edit an Insights guide, edit the `POSTS` list in `assets/main.js`. The "How we work" steps are the `PROC` list in the same file.
+
+## Careers page
+
+`careers.html` (with `assets/careers.css` and `assets/careers.js`) has values, perks, teams, open roles, hiring steps and an application form.
+
+- **Open roles:** edit the `ROLES` list in `assets/careers.js`. Remove a role to close it; team cards and filters update automatically. The five roles there now are drafts: confirm them before launch.
+- **Perks:** confirm the "What you can expect" list matches what you offer.
