@@ -22,6 +22,7 @@
   --sans:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
   --mono:'Space Grotesk',ui-monospace,Menlo,Consolas,monospace;
 }
+[hidden]{display:none!important}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:86px}
 body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
